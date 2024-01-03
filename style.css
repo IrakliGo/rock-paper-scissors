@@ -1,0 +1,32 @@
+.flex-1, .flex-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-1 {
+    flex-direction: column;
+}
+
+.flex-1 p {
+    font-weight: bold;
+}
+
+.flex-2 img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.flex-2 {
+    gap: 30px;
+}
+
+
+#dv, #parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
