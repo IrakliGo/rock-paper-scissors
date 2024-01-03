@@ -1,9 +1,12 @@
+//random
 function computerRandom() {
     const choices = ['rock', 'paper', 'scissors']
     const random = Math.floor(Math.random() * choices.length)
     return choices[random]
 }
 
+
+//scenarios
 function playRound(playerSection, computerSection) {
     let plater = playerSection.toLowerCase()
 if(plater == 'rock' && computerSection == 'paper') {
@@ -36,24 +39,33 @@ else {
 
 
 
+//connected to #dv, and #parent
 const show = document.getElementById('dv')
 const scores = document.getElementById('parent')
+
+//created paragraphs and appended to parent
 const paragraph1 = document.createElement('p')
 const paragraph2 = document.createElement('p')
 scores.append(paragraph1,paragraph2)
 
+//local loops/scores
 let round = 1
 let computerScore = 0
 let playerScore = 0
 
+
+//actual game
 function game(player1) {
+//empty messages are for clearing previous answers
 show.innerHTML=''
 scores.innerHTML=''
+//dom manipulation
 show.innerHTML+= `round - ${round} <br>` 
 let computer = computerRandom()
 const result = playRound(player1,computer)
 show.innerHTML+= `${result} <br>`
 
+//tracking
 if(result.includes('won')) {
     playerScore++
 } 
@@ -70,6 +82,7 @@ if(round ===5) {
 round++
 }
 
+//restart function
 function restart() {
     if(playerScore>computerScore) {
         show.innerHTML+= 'congrats yay:)) <br>'
@@ -80,6 +93,7 @@ function restart() {
         show.innerHTML+= 'friendship won <br>'
     }
 
+    //default. back to normal
     setTimeout(() => {
         alert('restart')
   round = 1
@@ -91,10 +105,13 @@ function restart() {
 }
 
 
+//dom
 const rock = document.getElementById('rock')
 const paper = document.getElementById('paper')
 const scissors = document.getElementById('scissors')
 
+
+//event listeners
 rock.addEventListener('click', () => game('rock'))
 
 paper.addEventListener('click', () => game('paper'))

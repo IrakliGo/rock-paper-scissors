@@ -1,3 +1,4 @@
+/*making everything ih center*/
 .flex-1, .flex-2 {
     display: flex;
     justify-content: center;
@@ -20,11 +21,14 @@
     cursor: pointer;
 }
 
+/*gap between photos*/
+
 .flex-2 {
     gap: 30px;
 }
 
 
+/*center*/
 #dv, #parent {
     display: flex;
     justify-content: center;
