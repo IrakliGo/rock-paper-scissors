@@ -1,2 +1,2 @@
 # rock-paper-scissors
- rock paper scissors game in js!
+https://irakligo.github.io/rock-paper-scissors/
